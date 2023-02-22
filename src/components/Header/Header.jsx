@@ -2,20 +2,24 @@
 import React from 'react';
 import { Typography, Tab, Tabs, AppBar } from '@mui/material';
 
+// styles
+import styles from './styles.module.scss';
+
 const Header = ({ changeTab, currentTab, title }) => {
+  console.log('Header');
   return (
     <>
       <Typography
         variant='h3'
         align='center'
-        sx={{ paddingTop: 6, color: 'white' }}
+        className={styles.title}
       >
         {title}
       </Typography>
       <AppBar
         color='default'
-        style={{ marginBottom: '24px', backgroundColor: 'rgb(19, 47, 76)' }}
-        maxWidth='md'
+        className={styles.appBar}
+        style={{ backgroundColor: 'rgb(19, 47, 76)' }}
       >
         <Tabs
           value={currentTab}
@@ -25,12 +29,14 @@ const Header = ({ changeTab, currentTab, title }) => {
           <Tab
             label='all jokes'
             id='all-tab'
+            className={styles.tab}
             sx={{ color: 'white' }}
             aria-controls='all-panel'
           />
           <Tab
             label='favourite'
             id='favourite-tab'
+            className={styles.tab}
             sx={{ color: 'white' }}
             aria-controls='favourite-panel'
           />
