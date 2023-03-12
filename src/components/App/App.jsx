@@ -63,14 +63,13 @@ const App = () => {
           role='tabpanel'
           hidden={currentTab !== 1}
         >
-          {favouriteJokes.map(joke => (
-            // <JokeList
-            //   currentTab={currentTab}
-            //   jokes={jokes}
-            //   favouriteJokes={favouriteJokes}
-            //   deleteJokeFromFavourite={deleteJokeFromFavourite}
-            //   addJokeToFavourite={addJokeToFavourite}
-            // />
+          <JokeList
+            currentTab={currentTab}
+            favouriteJokes={favouriteJokes}
+            deleteJokeFromFavourite={deleteJokeFromFavourite}
+            addJokeToFavourite={addJokeToFavourite}
+          />
+          {/* {favouriteJokes.map(joke => (
             <Card
               key={joke.id}
               sx={{ marginBottom: '20px' }}
@@ -89,7 +88,7 @@ const App = () => {
                 </Button>
               </CardActions>
             </Card>
-          ))}
+          ))} */}
         </Box>
       </Container>
     </div>
