@@ -33,6 +33,8 @@ const App = () => {
     return <div>Error: {error.message}</div>;
   }
 
+  console.log('Hello')
+
   return (
     <div className={styles.app}>
       <CssBaseline />
