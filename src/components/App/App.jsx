@@ -33,7 +33,7 @@ const App = () => {
     return <div>Error: {error.message}</div>;
   }
 
-  console.log('He')
+  console.log('Helllo)')
 
   return (
     <div className={styles.app}>
